@@ -1,0 +1,84 @@
+# Урок №1
+# Тема: Переменные и простые типы данных
+
+message = 'Hello World!'
+print(message)
+
+name = 'илья меркулов'
+print(name.title())
+
+print('\n.')
+
+name = 'Илья Меркулов'
+print(name.upper())
+print(name.lower())
+
+print('\n.')
+
+first_name = 'илья'
+last_name = 'меркулов'
+full_name = f"{first_name} {last_name}"
+print(full_name)
+message = f"Привет, {full_name.title()}!"
+print(message)
+
+print('\n.')
+
+print('\nPython')
+print('\tPython')
+print('\n \tPython')
+
+print('Languages: \n \tPython \n \tC \n \tJavaScript')
+
+print('\n.')
+
+favorite_language = '   python   '
+print(favorite_language)
+
+
+# rstrip() - удаление пробелов в Python IDLE
+
+# >>> favorite_laungage = 'python   '
+# >>> favorite_laungage
+# 'python   '
+# >>> favorite_laungage.rstrip()
+# 'python'
+# >>> favorite_laungage
+# 'python   '
+# >>> favorite_laungage = 'python   '
+# >>> favorite_laungage = favorite_laungage.rstrip()
+# >>> favorite_laungage
+# 'python'
+
+# Операции в консоли
+# >>> 2+3
+# 5
+# >>> 3-2
+# 1
+# >>> 2*3
+# 6
+# >>> 3/2
+# 1.5
+# >>> 3**2
+# 9
+# >>> 3**3
+# 27
+# >>> 10**6
+# 1000000
+# >>> 2+3*4
+# 14
+# >>> (2+3)*4
+# 20
+# >>> 0.1+0.1
+# 0.2
+# >>> 0.2+0.2
+# 0.4
+# >>> 2*0.1
+# 0.2
+# >>> 2*0.2
+# 0.4
+
+print('\n.')
+
+universe_age = 14_000_000_000
+print(universe_age)
