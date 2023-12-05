@@ -1,0 +1,127 @@
+# Урок №7
+# Тема: Цикл while
+
+# Цикл while в действии
+
+current_number = 1
+while current_number <= 5:
+    print(current_number)
+    current_number += 1
+    
+# Пользователь решает прервать работу программы
+
+print('\n.')
+
+prompt = '\nTell me something, and I will repeat it back to you: '
+prompt += '\nEnter `quit` to end the program. '
+message = ''
+while message != 'quit':
+    message = input(prompt)
+    
+    if message != 'quit':
+        print(message)
+        
+# Флаги
+
+print('\n.')
+
+prompt = '\nTell me something, and I will repeat it back to you: '
+prompt += '\nEnter `quit` to end the program. '
+
+active = True
+while active:
+    message = input(prompt)
+    
+    if message == 'quit':
+        active = False
+    else:
+        print(message)
+        
+# Команда break и выход из цикла
+
+print('\n.')
+
+prompt = '\nTell me something, and I will repeat it back to you: '
+prompt += '\nEnter `quit` to end the program. '
+
+while True:
+    city = input(prompt)
+    
+    if city == 'quit':
+        break
+    else:
+        print(f'I`d love to go to {city.title()}!')
+        
+# Команда continue и продолжение цикла
+
+print('\n.')
+
+current_number = 0
+while current_number < 10:
+    current_number += 1
+    if current_number % 2 == 0:
+        continue
+    
+    print(current_number)
+    
+# Предотвращение зацикливания
+
+print('\n.')
+
+x = 1
+while x <= 5:
+    print(x)
+    x += 1
+    
+# x = 1
+# while x <= 5:
+#    print(x)
+    
+# Использование цикла while со списками с словарями
+
+unconfirmed_users = ['alice', 'brian', 'candace']
+confirmed_users = []
+
+while unconfirmed_users:
+    current_users = unconfirmed_users.pop()
+    
+    print(f'Verifying user: {current_users.title()}')
+    confirmed_users.append(current_users)
+    
+print(f'\nThe following users have been confirmed: ')
+for confirmed_user in confirmed_users:
+    print(confirmed_user.title())
+    
+# Удаление всех вхождений конкретного значения изз списка
+
+print('\n.')
+
+pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+print(pets)
+
+while 'cat' in pets:
+    pets.remove('cat')
+    
+print(pets)
+
+# Заполнение словаря данным, введенными пользователем
+
+print('\n.')
+
+responses = {}
+
+polling_active = True
+
+while polling_active:
+    name = input('\nWhat is your name? ')
+    response = input('Which mountain would you like to climb someday? ')
+    
+    responses[name] = response
+    
+    repeat = input('\nWould you like to let another person respond? (yes/no)')
+    if repeat == 'no':
+        polling_active = False
+        
+print('\n--- Poll Results ---')
+for name, response in responses.items():
+    print(f'{name} would like to climb {response}.')
